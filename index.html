@@ -1,82 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sindoor Operation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean India Mission</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff0f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
-    .container {
+    header {
+      background-color: #1b5e20;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
-    .bride {
-      position: relative;
-      display: inline-block;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
-    .face {
-      width: 200px;
-      height: 250px;
-      background-color: #ffe4e1;
-      border-radius: 50% 50% 40% 40%;
-      position: relative;
-      border: 2px solid #d87093;
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
     }
 
-    .sindoor {
-      width: 20px;
-      height: 10px;
-      background-color: red;
-      position: absolute;
-      top: 20px;
-      left: 90px;
-      border-radius: 10px;
-      display: none;
-    }
-
-    .button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: crimson;
+    nav a {
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
-    .button:hover {
-      background-color: darkred;
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Sindoor Operation</h1>
-    <div class="bride">
-      <div class="face">
-        <div class="sindoor" id="sindoor"></div>
-      </div>
-    </div>
-    <br />
-    <button class="button" onclick="applySindoor()">Apply Sindoor</button>
-  </div>
 
-  <script>
-    function applySindoor() {
-      const sindoor = document.getElementById('sindoor');
-      sindoor.style.display = 'block';
-    }
-  </script>
+  <header>
+    <h1>Swachh Bharat Abhiyan</h1>
+    <p>Clean India Green India</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#howtohelp">How to Help</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Swachh_Bharat_Abhiyan_logo.svg/2560px-Swachh_Bharat_Abhiyan_logo.svg.png" alt="Swachh Bharat" class="banner">
+
+    <div id="about" class="card">
+      <h2>About Clean India</h2>
+      <p>Swachh Bharat Abhiyan is a nation-wide campaign in India for the period 2014 to 2019 that aimed to clean the streets, roads and infrastructure of the country's cities, towns, and rural areas.</p>
+    </div>
+
+    <div id="mission" class="card">
+      <h2>Our Mission</h2>
+      <p>The mission is to promote cleanliness, hygiene and eliminate open defecation across India through community engagement and infrastructure improvements.</p>
+    </div>
+
+    <div id="howtohelp" class="card">
+      <h2>How You Can Help</h2>
+      <ul>
+        <li>Don't litter. Use dustbins.</li>
+        <li>Participate in community cleaning drives.</li>
+        <li>Raise awareness about cleanliness in your locality.</li>
+        <li>Volunteer with NGOs promoting hygiene and sanitation.</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="card">
+      <h2>Contact Us</h2>
+      <p>Email: cleanindia@mission.gov.in</p>
+      <p>Phone: +91-1234567890</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clean India Mission. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
