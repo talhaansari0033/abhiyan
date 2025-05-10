@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sindoor Operation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .bride {
+      position: relative;
+      display: inline-block;
+    }
+
+    .face {
+      width: 200px;
+      height: 250px;
+      background-color: #ffe4e1;
+      border-radius: 50% 50% 40% 40%;
+      position: relative;
+      border: 2px solid #d87093;
+    }
+
+    .sindoor {
+      width: 20px;
+      height: 10px;
+      background-color: red;
+      position: absolute;
+      top: 20px;
+      left: 90px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sindoor Operation</h1>
+    <div class="bride">
+      <div class="face">
+        <div class="sindoor" id="sindoor"></div>
+      </div>
+    </div>
+    <br />
+    <button class="button" onclick="applySindoor()">Apply Sindoor</button>
+  </div>
+
+  <script>
+    function applySindoor() {
+      const sindoor = document.getElementById('sindoor');
+      sindoor.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
